@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    window.targetUrl = "https://link.maustec.io/"
+  </script>
+</head>
+<body>
+  <center>
+    <h1>Redirecting...</h1>
+    <p>To better support generic control of all Maus-Tec devices, the web interface has moved domains.</p>
+    <p>Click here: <a id="targetlink" href="https://link.maustec.io/">https://link.maustec.io</a></p>
+  </center>
+  
+  <script>
+    window.onload = function() {
+      var el = document.getElementById("targetlink");
+      el.href = targetUrl;
+      el.innerText = targetUrl;
+      location.replace(targetUrl);
+    }
+  </script>
+</body>
+</html>
